@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/imagen_de_fondo_con_lapices"
+        android:scaleType="fitXY"
+        android:src="@drawable/background" />
+
+
+    <!--<com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-4278289028669575/1862615195">
+    </com.google.android.gms.ads.AdView>-->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="false"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/playTennis"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/buttontennis1"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="5dp"
+                android:text="@string/tennis"
+                android:textColor="@color/colorSpecial"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/playHockey"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/buttonhockey1"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="5dp"
+                android:text="@string/hockey"
+                android:textColor="@color/colorSpecial"
+                android:textSize="22sp" />
+
+
+            <RadioGroup
+                android:id="@+id/radioNivelGrupo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:checkedButton="@id/radioNivel1"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioNivel1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:minHeight="48dp"
+                    android:text="@string/nivel_1" />
+
+                <RadioButton
+                    android:id="@+id/radioNivel2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    android:text="@string/nivel_2" />
+
+                <RadioButton
+                    android:id="@+id/radioNivel3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    android:text="@string/nivel_3" />
+
+            </RadioGroup>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#D5FFFFFF"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchPlayer"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:gravity="end|center_vertical"
+                    android:minHeight="48dp"
+                    android:text="@string/computadora"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                <ImageView
+                    android:id="@+id/imageViewPlayer"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="start"
+                    android:contentDescription="@string/imagen_de_2_jugadores"
+                    app:srcCompat="@drawable/twoplayers" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/playSquash"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/buttonsquash1"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="5dp"
+                android:text="@string/squash"
+                android:textColor="@color/colorSpecial"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/tutorial"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/button"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="5dp"
+                android:text="@string/tutorial"
+                android:textColor="@color/colorSpecial"
+                android:textSize="22sp" />
+
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_weight="1"
+                android:minHeight="48dp"
+                android:text="@string/velocidad"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchSize"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_weight="1"
+                android:minHeight="48dp"
+                android:text="@string/tama_o"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchAngle"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_weight="1"
+                android:minHeight="48dp"
+                android:text="@string/angulo"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_weight="1"
+                android:minHeight="48dp"
+                android:text="@string/color_fondo"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_publicity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/volumeCtrl"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_small"
+            android:contentDescription="@string/activar_desactivar_altavoz"
+            android:src="@drawable/ic_volume_up" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Pong</string>
+
+    <string name="home_title">
+        <b><big>Help:</big></b>
+    </string>
+
+    <string name="febrer_software">Febrer Software ©2021</string>
+    <string name="velocidad">2X Velocity</string>
+    <string name="tama_o">Middle size</string>
+    <string name="angulo">Great angle</string>
+    <string name="computadora">2 PLAYERS</string>
+    <string name="nivel_1">Easy</string>
+    <string name="nivel_2">Medium</string>
+    <string name="nivel_3">Hard</string>
+    <string name="contenido3">Use</string>
+    <string name="contenido2">Who win</string>
+    <string name="contenido1">Options</string>
+    <string name="tennis">Tennis</string>
+    <string name="hockey">Hockey</string>
+    <string name="squash">Squash</string>
+    <string name="tutorial">Help</string>
+    <string name="activar_desactivar_altavoz">Speaker activate/deactivate</string>
+    <string name="imagen_de_fondo_con_lapices">Background pencil image</string>
+    <string name="version">Version: </string>
+    <string name="imagen_de_ordenador_pong">PONG computer image</string>
+    <string name="tv_text1">Use the <b> right area </b> of the screen to move the <b> red shovel </b>. The <b> left area </b> allows you to move the <b> blue shovel </b> if it is in 2-player mode. Use the back button to exit the game. </string>
+    <string name="tv_text2"><b>Games</b> are played up to a score of <b> 15 </b>. The first to arrive wins the game.</string>
+    <string name="tv_text3">With the options on the main screen, you can alter the operation of the game. <b>Enjoy it!</b></string>
+    <string name="imagen_de_2_jugadores">2 players image</string>
+    <string name="salir">Are you sure to exit?</string>
+    <string name="si">Yes</string>
+    <string name="no">No</string>
+    <string name="imagen_de_tenis">Tennis image</string>
+    <string name="gameover">GAME OVER</string>
+    <string name="color_fondo">Black Background</string>
+
+</resources>

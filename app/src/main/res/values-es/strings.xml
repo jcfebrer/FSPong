@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Pong</string>
+
+    <string name="home_title">
+        <b><big>Ayuda:</big></b>
+    </string>
+
+    <string name="febrer_software">Febrer Software ©2021</string>
+    <string name="velocidad">Doble velocidad</string>
+    <string name="tama_o">Mitad de tamaño</string>
+    <string name="angulo">Mayor ángulo</string>
+    <string name="computadora">2 JUGADORES</string>
+    <string name="nivel_1">Fácil</string>
+    <string name="nivel_2">Medio</string>
+    <string name="nivel_3">Difícil</string>
+    <string name="contenido3">Manejo</string>
+    <string name="contenido2">Quien gana</string>
+    <string name="contenido1">Opciones</string>
+    <string name="tennis">Tenis</string>
+    <string name="hockey">Fútbol</string>
+    <string name="squash">Frontón</string>
+    <string name="tutorial">Ayuda</string>
+    <string name="activar_desactivar_altavoz">Activar/Desactivar altavoz</string>
+    <string name="imagen_de_fondo_con_lapices">Imagen de fondo con lápices</string>
+    <string name="version">Versión: </string>
+    <string name="imagen_de_ordenador_pong">Imagen de ordenador PONG</string>
+    <string name="tv_text1">Utiliza la <b>zona derecha</b> de la pantalla para mover la <b>pala roja</b>. La <b>zona izquierda</b> permite mover la <b>pala azul</b> si esta en modo de 2 jugadores. Utiliza el botón atrás para salir de la partida.</string>
+    <string name="tv_text2"><b>Las partidas</b> se juegan hasta una puntuación de <b>15</b>. El primero que llega, gana la partida.</string>
+    <string name="tv_text3">Con las opciones de la pantalla principal, puedes alterar el funcionamiento del juego. <b>Que lo disfrutes!</b></string>
+    <string name="imagen_de_2_jugadores">Imagen de 2 jugadores</string>
+    <string name="salir">¿Estás seguro de querer salir?</string>
+    <string name="si">Si</string>
+    <string name="no">No</string>
+    <string name="imagen_de_tenis">Imagen de tenis</string>
+    <string name="gameover">GAME OVER</string>
+    <string name="color_fondo">Fondo negro</string>
+
+</resources>
