@@ -1,5 +1,15 @@
 # FSPong
-Pong application for Android
+Pong application for Android / Aplicación Pong para Android
+
+https://play.google.com/store/apps/details?id=com.febrersoftware.pong
+
+Version of the classic and simple Atari game, PONG. An attempt has been made to keep all the feel and appearance of the original version.
+An ideal game to play with your younger children due to its simplicity and addiction.
+The game of tennis, soccer and fronton are included.
+
+Versión del clásico y sencillo juego de Atari, PONG. Se ha intentado mantener toda la sensación y apariencia de la versión original.
+Un juego ideal para jugar en compañía de tus hijos menores por su simplicidad y adicción.
+Se incluyen el juego de tenis, fútbol y frontón.
 
 ![logo](https://github.com/jcfebrer/FSPong/assets/5434898/c4108f0b-e0a1-4fe0-93f6-31ff38b2b909)
 
