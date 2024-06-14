@@ -125,6 +125,34 @@
                             android:textSize="12sp" />
 
                     </LinearLayout>
+
+                <!-- Four Entry -->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_title4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="15dp"
+                        android:text="@string/contenido4"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_paragraph4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="15dp"
+                        android:padding="20dp"
+                        android:textColor="@color/primary_text"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
             </LinearLayout>
         </ScrollView>
 

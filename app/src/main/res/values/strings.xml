@@ -13,9 +13,10 @@
     <string name="nivel_1">Easy</string>
     <string name="nivel_2">Medium</string>
     <string name="nivel_3">Hard</string>
-    <string name="contenido3">Use</string>
-    <string name="contenido2">Who win</string>
     <string name="contenido1">Options</string>
+    <string name="contenido2">Who win</string>
+    <string name="contenido3">Use</string>
+    <string name="contenido4">GitHub</string>
     <string name="tennis">Tennis</string>
     <string name="hockey">Hockey</string>
     <string name="squash">Squash</string>
@@ -27,6 +28,7 @@
     <string name="tv_text1">Use the <b> right area </b> of the screen to move the <b> red shovel </b>. The <b> left area </b> allows you to move the <b> blue shovel </b> if it is in 2-player mode. Use the back button to exit the game. </string>
     <string name="tv_text2"><b>Games</b> are played up to a score of <b> 15 </b>. The first to arrive wins the game.</string>
     <string name="tv_text3">With the options on the main screen, you can alter the operation of the game. <b>Enjoy it!</b></string>
+    <string name="tv_text4">Source Code: https://github.com/jcfebrer/FSPong</string>
     <string name="imagen_de_2_jugadores">2 players image</string>
     <string name="salir">Are you sure to exit?</string>
     <string name="si">Yes</string>

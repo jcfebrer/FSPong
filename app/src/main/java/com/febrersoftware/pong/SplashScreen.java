@@ -30,7 +30,7 @@ public class SplashScreen extends AppCompatActivity {
         try {
             PackageInfo pInfo = this.getPackageManager().getPackageInfo(this.getPackageName(), 0);
             String version = pInfo.versionName;
-            text_version.setText(getString(R.string.version) + version);
+            text_version.setText(getString(R.string.version) + version + " " + getString(R.string.tv_text4));
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
