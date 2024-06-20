@@ -15,14 +15,14 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="250dp"
+            android:layout_width="500dp"
             android:layout_height="300dp"
             android:contentDescription="@string/imagen_de_ordenador_pong"
             android:src="@drawable/logo_final_pong" />
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="240dp"
+            android:layout_width="480dp"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:text="@string/febrer_software"
@@ -32,7 +32,7 @@
 
         <TextView
             android:id="@+id/version"
-            android:layout_width="240dp"
+            android:layout_width="480dp"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:text="@string/version"
