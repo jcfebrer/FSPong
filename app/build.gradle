@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdk 35
+    compileSdk 37
     defaultConfig {
         applicationId "com.febrersoftware.pong"
-        minSdkVersion 21
-        targetSdkVersion 35
-        versionCode 264
-        versionName "2.6.4"
+        minSdkVersion 23
+        targetSdkVersion 37
+        versionCode 265
+        versionName "2.6.5"
         multiDexEnabled true
     }
     buildTypes {
@@ -25,15 +25,15 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.7.1'
+    implementation 'androidx.appcompat:appcompat:1.8.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     //implementation 'com.google.android.gms:play-services-ads:22.4.0'
 
     constraints {
-        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0") {
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:2.2.10") {
             because("kotlin-stdlib-jdk7 is now a part of kotlin-stdlib")
         }
-        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0") {
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.2.10") {
             because("kotlin-stdlib-jdk8 is now a part of kotlin-stdlib")
         }
     }
