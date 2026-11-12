@@ -226,6 +226,17 @@
                 android:text="@string/color_fondo"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchDebug"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_weight="1"
+                android:minHeight="48dp"
+                android:text="@string/debug_mode"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
 
         </LinearLayout>
 

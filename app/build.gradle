@@ -4,10 +4,10 @@ android {
     compileSdk 37
     defaultConfig {
         applicationId "com.febrersoftware.pong"
-        minSdkVersion 23
+        minSdkVersion 24
         targetSdkVersion 37
-        versionCode 265
-        versionName "2.6.5"
+        versionCode 270
+        versionName "2.7.0"
         multiDexEnabled true
     }
     buildTypes {

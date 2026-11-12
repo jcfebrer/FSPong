@@ -27,11 +27,15 @@ public class Paddle implements Sprite{
 
     GameView gameView;
     Resources res;
+    private final Paint redPaint = new Paint();
+    private final Paint bluePaint = new Paint();
 
     public Paddle(GameView gameView, Resources res) {
 
         this.gameView = gameView;
         this.res = res;
+        redPaint.setColor(Color.RED);
+        bluePaint.setColor(Color.BLUE);
     }
 
     public void draw(Canvas canvas) {
@@ -65,7 +69,7 @@ public class Paddle implements Sprite{
 
     void drawPaddle(Canvas canvas, int paddleNum, int paddleY, Ball ball)
     {
-        Paint paint = new Paint();
+        Paint paint = (paddleNum == 1 || paddleNum == 4) ? redPaint : bluePaint;
         paint.setStrokeWidth(Global.paddleWidth * Global.scaleX);
 
         int bat1X = 2;
@@ -75,30 +79,24 @@ public class Paddle implements Sprite{
         int bat5X = 76;
 
         int paddleX = 0;
-        int c = 0;
         if (paddleNum == 1) // Left player left paddle
         {
-            c = Color.RED;
             paddleX = bat1X;
         }
         if (paddleNum == 5) // Right player right paddle
         {
-            c = Color.BLUE;
             paddleX = bat5X;
         }
         if (paddleNum == 4) // Left player mid/squash paddle
         {
-            c = Color.RED;
             paddleX = bat4X;
         }
         if (paddleNum == 2) // Right player mid paddle
         {
-            c = Color.BLUE;
             paddleX = bat2X;
         }
         if (paddleNum == 3) // Right player squash paddle
         {
-            c = Color.BLUE;
             paddleX = bat3X;
         }
         int y1 = paddleY;
@@ -112,7 +110,6 @@ public class Paddle implements Sprite{
             y2 = Global.pongHeight - 2;
         }
 
-        paint.setColor(c);
         canvas.drawLine((paddleX * Global.scaleX) + Global.posXCenter, (y1 * Global.scaleY) + Global.posYCenter, (paddleX * Global.scaleX) + Global.posXCenter, (y2 * Global.scaleY) + Global.posYCenter, paint);
 
         //comprobamos si la pelota colisiona con un paddle

@@ -15,15 +15,16 @@ public class Boundary implements Sprite{
 
     GameView gameView;
     Resources res;
+    private final Paint paint = new Paint();
 
     public Boundary(GameView gameView, Resources res) {
         this.gameView = gameView;
         this.res = res;
+        paint.setColor(Color.WHITE);
     }
 
     public void draw(Canvas canvas) {
 
-        Paint paint = new Paint();
         paint.setStrokeWidth(Global.scaleX);
         paint.setColor(Color.WHITE);
 

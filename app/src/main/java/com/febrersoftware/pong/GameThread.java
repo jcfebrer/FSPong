@@ -5,7 +5,7 @@ import android.util.Log;
 import android.view.SurfaceHolder;
 
 public class GameThread extends Thread{
-    public static final double MAX_UPS = 45.0;
+    public static final double MAX_UPS = 60.0;
     private static final double UPS_PERIOD = 1E+3/MAX_UPS;
 
     private GameView game;
@@ -54,7 +54,14 @@ public class GameThread extends Thread{
 
             // Try to update and render game
             try {
-                canvas = surfaceHolder.lockCanvas();
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                    canvas = surfaceHolder.lockHardwareCanvas();
+                    if (canvas == null) {
+                        canvas = surfaceHolder.lockCanvas();
+                    }
+                } else {
+                    canvas = surfaceHolder.lockCanvas();
+                }
                 synchronized (surfaceHolder) {
                     game.update();
                     updateCount++;

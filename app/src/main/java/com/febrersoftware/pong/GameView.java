@@ -16,6 +16,7 @@ import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
+import android.view.WindowManager;
 
 import androidx.annotation.NonNull;
 
@@ -81,8 +82,18 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         //canvas.translate(posXCenter, posYCenter);
         //canvas.scale(Global.scaleX, Global.scaleY);
 
-        //desactivamos la aceleración por software
-        view.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+        // Comprobar si la actividad/ventana tiene la aceleración por hardware habilitada
+        boolean hardwareAccelerated = false;
+        if (activity != null && activity.getWindow() != null) {
+            int windowFlags = activity.getWindow().getAttributes().flags;
+            hardwareAccelerated = (windowFlags & WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED) != 0;
+        }
+
+        if (hardwareAccelerated) {
+            view.setLayerType(View.LAYER_TYPE_HARDWARE, null);
+        } else {
+            view.setLayerType(View.LAYER_TYPE_NONE, null);
+        }
 
         /*view.setLayerType(View.LAYER_TYPE_HARDWARE, null);
         ObjectAnimator scale = ObjectAnimator.ofPropertyValuesHolder(view,

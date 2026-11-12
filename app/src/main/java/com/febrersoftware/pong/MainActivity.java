@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean isSoundMute;
     TextView gameTennis, gameHockey, gameSquash, gameTutorial;
-    SwitchCompat switchSpeed, switchAngle, switchSize, switch2Player, switchBlack;
+    SwitchCompat switchSpeed, switchAngle, switchSize, switch2Player, switchBlack, switchDebug;
     ImageView imageViewPlayer;
     RadioGroup radioNivelGrupo;
     Activity activity;
@@ -88,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
         switchSize = findViewById(R.id.switchSize);
         switch2Player = findViewById(R.id.switchPlayer);
         switchBlack = findViewById(R.id.switchBlack);
+        switchDebug = findViewById(R.id.switchDebug);
 
         radioNivelGrupo = findViewById(R.id.radioNivelGrupo);
 
@@ -131,6 +132,12 @@ public class MainActivity extends AppCompatActivity {
                     Global.color = Color.BLACK;
                 else
                     Global.color = Color.GREEN;
+            }
+        });
+
+        switchDebug.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                Global.debug = isChecked;
             }
         });
 
@@ -217,6 +224,8 @@ public class MainActivity extends AppCompatActivity {
             switchBlack.setChecked(false);
         else
             switchBlack.setChecked(true);
+
+        switchDebug.setChecked(Global.debug);
 
         volumeCtrl.setOnClickListener(new View.OnClickListener() {
             @Override

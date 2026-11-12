@@ -22,6 +22,10 @@ public class Score implements Sprite{
     int rightDig1X = 43;
     int rightDig2X = 51;
 
+    private final Bitmap[] redDigits = new Bitmap[10];
+    private final Bitmap[] blueDigits = new Bitmap[10];
+    private final Paint scorePaint = new Paint();
+
     // Font bitmap for the 7 segment on-screen scoring display
     public byte[] sevenSegPAL = new byte[] {
             (byte) 0xFC, (byte) 0xFC, (byte) 0xFC, (byte) 0xCC, (byte) 0xCC, (byte) 0xCC, (byte) 0xCC, (byte) 0xCC,
@@ -94,41 +98,46 @@ public class Score implements Sprite{
 
     void drawDigit(int x, int y, int number, Canvas canvas, int color)
     {
-        drawBinaryBitmap(x, y, sevenSegPAL, number * 15, 8, 15, color, canvas);
+        if (number < 0 || number > 9) return;
+        if (redDigits[0] == null) {
+            initDigits();
+        }
+        Bitmap bmp = (color == Color.BLUE) ? blueDigits[number] : redDigits[number];
+        if (bmp != null) {
+            canvas.drawBitmap(bmp, (x * Global.scaleX) + Global.posXCenter, (y * Global.scaleY) + Global.posYCenter, scorePaint);
+        }
     }
 
-    public static void drawBinaryBitmap(int x, int y, byte[] pixels, int pos, int width,
-                                        int height, int color, Canvas canvas)
-    {
-        Paint paint = new Paint();
-        //paint.setStrokeWidth(Global.strokeWidth * Global.scaleX);
-        paint.setColor(Color.RED);
+    private void initDigits() {
+        int w1 = 8;
+        int h1 = 15;
+        int scaledW = (int) (w1 * Global.scaleX);
+        int scaledH = (int) (h1 * Global.scaleY);
+        if (scaledW <= 0) scaledW = 1;
+        if (scaledH <= 0) scaledH = 1;
 
-        int x1, y1;
-        int w1, h1;
+        for (int d = 0; d < 10; d++) {
+            redDigits[d] = createDigitBitmap(d, Color.RED, w1, h1, scaledW, scaledH);
+            blueDigits[d] = createDigitBitmap(d, Color.BLUE, w1, h1, scaledW, scaledH);
+        }
+    }
 
-        w1 = width; //cada byte son 8 bits
-        h1 = height;
-
-        Bitmap.Config config = Bitmap.Config.ARGB_8888;
-        Bitmap bmp = Bitmap.createBitmap(w1, h1, config);
-
-        //int line = 0;
-
-        for (int i = pos; i < pixels.length; i++)
-            for (int j = 0; j < 8; j++) //recorremos cada bit del byte y si ....
-                if ((Integer.rotateLeft(pixels[i], j) & 128) == 128) //si el valor es un 1, pintamos
-                {
-                    x1 = (i - pos) % (w1 / 8) * 8 + j; //((i % (w1 / 8)) * 8) + (7 - j);
-                    y1 = (i - pos) / (w1 / 8); //line;
-
-                    if (x1 < w1 && y1 < h1)
+    private Bitmap createDigitBitmap(int number, int color, int w1, int h1, int scaledW, int scaledH) {
+        int pos = number * 15;
+        Bitmap bmp = Bitmap.createBitmap(w1, h1, Bitmap.Config.ARGB_8888);
+        for (int i = pos; i < pos + 15 && i < sevenSegPAL.length; i++) {
+            for (int j = 0; j < 8; j++) {
+                if ((Integer.rotateLeft(sevenSegPAL[i], j) & 128) == 128) {
+                    int x1 = (i - pos) % (w1 / 8) * 8 + j;
+                    int y1 = (i - pos) / (w1 / 8);
+                    if (x1 < w1 && y1 < h1) {
                         bmp.setPixel(x1, y1, color);
+                    }
                 }
-
-        paint.setFilterBitmap(false);
-        Bitmap bmpScale = Bitmap.createScaledBitmap(bmp, (int) (w1 * Global.scaleX), (int) (h1 * Global.scaleY), false);
-        canvas.drawBitmap(bmpScale, (x * Global.scaleX) + Global.posXCenter, (y * Global.scaleY) + Global.posYCenter, paint);
+            }
+        }
+        scorePaint.setFilterBitmap(false);
+        return Bitmap.createScaledBitmap(bmp, scaledW, scaledH, false);
     }
 
     @Override

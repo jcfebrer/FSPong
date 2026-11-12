@@ -36,5 +36,6 @@
     <string name="imagen_de_tenis">Imagen de tenis</string>
     <string name="gameover">GAME OVER</string>
     <string name="color_fondo">Fondo negro</string>
+    <string name="debug_mode">Modo depuración</string>
 
 </resources>

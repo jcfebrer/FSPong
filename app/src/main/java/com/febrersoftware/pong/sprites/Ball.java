@@ -21,6 +21,7 @@ public class Ball implements Sprite{
     int edgeWidth = 1;
     GameView gameView;
     Resources res;
+    private final Paint paint = new Paint();
 
     public Ball(GameView gameView, Resources res) {
 
@@ -30,17 +31,16 @@ public class Ball implements Sprite{
         ballXInc = ballSpeed;
         ballYInc = ballSpeed;
         ballVisible = false;
+        paint.setColor(Color.WHITE);
 
     }
 
     public void draw(Canvas canvas) {
 
         if(ballVisible) {
-            Paint paint = new Paint();
-            paint.setStrokeWidth(ballWidth * 2 * Global.scaleX);
-            paint.setColor(Color.WHITE);
-
-            canvas.drawPoint((x * Global.scaleX) + Global.posXCenter, (y * Global.scaleY) + Global.posYCenter, paint);
+            float size = ballWidth * 2 * Global.scaleX;
+            canvas.drawRect((x * Global.scaleX) + Global.posXCenter, (y * Global.scaleY) + Global.posYCenter,
+                    (x * Global.scaleX) + Global.posXCenter + size, (y * Global.scaleY) + Global.posYCenter + size, paint);
         }
     }
 
